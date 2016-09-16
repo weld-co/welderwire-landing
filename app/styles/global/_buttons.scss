@@ -1,0 +1,174 @@
+// Colors
+$weld: #f1592a;
+$red: #CC4327;
+$middle-red: #A83610;
+$dark-red: #7F2311;
+$dark-blue: #46525E;
+$blue: #86A2A3;
+$aqua: #A4D3CE;
+$yellow: #FAAA31;
+$true-black: #000000;
+$faded-black: rgba(0, 0, 0, 0.8);
+$dark-black: #222222;
+$black: #302824;
+$dark-grey: #615D5C;
+$grey: #aaaaaa;
+$middle-grey: #cccccc;
+$light-grey: #dddddd;
+$lightest-grey: #EEEEEE;
+$white: #FFFFFF;
+$blue-inactive: fade-out($blue, 0.7);
+
+// Applications
+$primary-color: $weld;
+$secondary-color: $blue;
+
+// Gradients
+$bg-gradient: linear-gradient(to bottom left, fade-out($blue, 0.2), fade-out($primary-color, 0.2));
+$bg-gradient-reverse: linear-gradient(to top right, fade-out($blue, 0.2), fade-out($primary-color, 0.2));
+
+// Random Variables
+$border: 1px solid darken($lightest-grey, 2);
+$cubic: cubic-bezier(0.75,0,0.5,1);
+$color-transition: background 400ms, color 300ms;
+
+
+
+/*====================================================
+    Buttons
+====================================================*/
+
+button {
+  // Button Reset
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button {
+  @extend button;
+  // Base Styles
+  display: inline-block;
+  background: $primary-color;
+  border-radius: 3px;
+  filter: drop-shadow(0 4px 0 $red);
+  padding: 1rem 2rem;
+
+  // Contents
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  // Animation
+  transition-duration: 200ms;
+  // height transition is for isLoading indicator
+  // opacity is for the .main-cta button
+  transition:
+    transform 200ms,
+    background 200ms,
+    opacity 1250ms 400ms,
+    filter 200ms,
+    -webkit-filter 200ms,
+    height 200ms;
+
+  &:hover {
+    transform: translateY(-3px);
+    color: white;
+    background: $primary-color;
+    filter: drop-shadow(0 4px 0 $red);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    transition: none;
+  }
+
+  // Space between buttons
+  &.margin-right {
+    margin-right: 1rem;
+  }
+
+  &-white {
+    @extend .button;
+    color: $primary-color;
+    background-color: $white;
+    filter: drop-shadow(0 4px 0 $lightest-grey);
+  }
+
+  &-black {
+    @extend .button;
+    color: white;
+    background-color: $black;
+    filter: drop-shadow(0 4px 0 $true-black);
+  }
+
+  &-grey {
+    @extend .button;
+    color: $black;
+    background-color: $lightest-grey;
+    filter: drop-shadow(0 4px 0 $middle-grey);
+  }
+
+  // Outline Buttons
+  &-secondary {
+    @extend .button;
+    background-color: transparent;
+    filter: none !important;
+    box-shadow: inset 0 0 0 2px white;
+
+    // Fill on hover
+    &:hover {
+      background-color: rgba(255,255,255,0.25);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    transition: none;
+    cursor: progress;
+  }
+}
+
+.small-button {
+  width: 60px;
+  max-height: 45px;
+  padding: 1rem 0;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  @media screen and (max-width: 400px) {
+    position: initial;
+  }
+}
+
+// Add class for icon
+.download:before {
+  content: url(../images/ui/download-icon.svg);
+  margin-right: 1rem;
+  display: inline-block;
+  vertical-align: sub;
+}
+
+.book-icon:before {
+  content: url(../images/ui/book-icon.svg);
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.add:before {
+  content: url(../images/ui/add-icon.svg);
+}
+
+.added:before {
+  content: url(../images/ui/check-icon.svg);
+  animation: scaleInUp 250ms $cubic;
+}

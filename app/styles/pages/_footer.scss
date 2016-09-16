@@ -1,0 +1,23 @@
+// NAV STYLING
+.footer {
+  background: $black;
+  padding: 1.5rem 0;
+
+  &__inner {
+    width: 100%;
+  }
+}
+
+.nav__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__container {
+  max-width: 8rem;
+}
+
+.logo {
+  width: 100%;
+}

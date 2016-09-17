@@ -8,3 +8,12 @@
   -webkit-overflow-scrolling: touch;
   font-family: sans-serif;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    transition: background 400ms, color 300ms;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}

@@ -1,11 +1,21 @@
 <section class="landing">
   <div class="landing__inner">
     <div class="text__content">
+      {{!-- <div class="img__box">
+        <img src="/_logos/wordmark.svg" class="wordmark" alt="WELD Logo">
+      </div> --}}
       <h1 class="title">Reserve Studio & Event Space</h1>
-      <div class="buttons">
-        <a href="#" class="button">Nashville</a>
-        <a href="#" class="button">Dallas</a>
-      </div>
+      <h3 class="sub">Please tip the studio after making your reservation or once you get paid.</h3>
     </div>
   </div>
 </section>
+<div class="squares">
+  <div class="squares__inner">
+    <span class="square__one">
+      {{#link-to 'dallas' class="text" }}Reserve Space in Dallas{{/link-to}}
+    </span>
+    <span class="square__one">
+      {{#link-to 'nashville' class="text" }}Reserve Space in Nashville{{/link-to}}
+    </span>
+  </div>
+</div>

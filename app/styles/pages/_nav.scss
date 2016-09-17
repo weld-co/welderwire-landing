@@ -1,7 +1,7 @@
 // NAV STYLING
 .container {
-  background: $white;
-  padding: 1.5rem 0;
+  background: $black;
+  padding-top: 2rem;
 
   &__inner {
     width: 100%;
@@ -9,15 +9,28 @@
 }
 
 .nav__content {
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-}
-
-.logo__container {
-  max-width: 8rem;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 .logo {
   width: 100%;
+  max-width: 2.5rem;
+  opacity: 0.3;
+  fill: $grey;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+.link__item {
+  font-family: sans-serif;
+  color: $white;
+  text-decoration: none;
+  margin: 0 1rem;
 }

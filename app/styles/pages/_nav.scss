@@ -1,0 +1,49 @@
+// NAV STYLING
+
+.container {
+  // background: $black;
+
+  &__inner {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+
+.nav__content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.logo {
+  max-width: 2.5rem;
+  opacity: 0.2;
+  height: 100%;
+  width: 100%;
+  transition: -webkit-filter 300ms;
+  transition: filter 300ms;
+  transition: filter 300ms, -webkit-filter 300ms;
+}
+
+.wordmark {
+  width: 100%;
+  max-width: 10rem;
+  color: $grey;
+  fill: $grey;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.link__item {
+  font-family: sans-serif;
+  color: $white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 12px;
+}

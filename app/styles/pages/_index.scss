@@ -21,12 +21,18 @@
 .title {
   font-size: 42px;
   color: $white;
+  font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+  font-style: normal;
+  font-weight: 700;
 }
 
 .sub {
   font-size: 20px;
   color: $white;
   padding-top: 2rem;
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-style: normal;
+  font-weight: 300;
 }
 
 .buttons {
@@ -50,17 +56,16 @@
   position: absolute;
   // background: url('/_images/home.jpg') center center no-repeat;
   // background-size: cover;
-
   &:before {
-  // min-height: 80vh;
-  content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-image: linear-gradient(to bottom left, rgba(134, 162, 163, 0.8), rgba(241, 89, 42, 0.8));
-// opacity: .6;
+    // min-height: 80vh;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom left, rgba(134, 162, 163, 0.8), rgba(241, 89, 42, 0.8));
+    // opacity: .6;
   }
 }
 
@@ -95,7 +100,9 @@
 .text {
   padding: 0 1rem;
   color: #302824;
-  font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, sans-serif;
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-style: normal;
+  font-weight: 300;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
@@ -111,5 +118,24 @@
 
 .text:hover {
   color: $white;
+}
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+}
+
+.tip__btn {
+  // width: 2rem;
+  // height: 1rem;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  color: $white;
+  background: $weld;
+  margin-right: 1rem;
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-style: normal;
+  font-weight: 300;
 }
 @media screen and (min-width: 10rem) and (max-width: 40rem) {}

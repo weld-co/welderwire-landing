@@ -137,6 +137,7 @@
   font-family: "Gotham SSm A", "Gotham SSm B";
   font-style: normal;
   font-weight: 500;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -148,5 +149,11 @@
   }
   .link__item {
     margin: 0 0.5rem;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .sub {
+    font-size: 18px;
   }
 }

@@ -21,12 +21,18 @@
 .title {
   font-size: 42px;
   color: $white;
+  font-family: 'Vitesse SSm A', 'Vitesse SSm B';
+  font-style: normal;
+  font-weight: 700;
 }
 
 .sub {
   font-size: 20px;
   color: $white;
   padding-top: 2rem;
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
+  font-style: normal;
+  font-weight: 300;
 }
 
 .buttons {
@@ -50,17 +56,16 @@
   position: absolute;
   // background: url('/_images/home.jpg') center center no-repeat;
   // background-size: cover;
-
   &:before {
-  // min-height: 80vh;
-  content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-image: linear-gradient(to bottom left, rgba(134, 162, 163, 0.8), rgba(241, 89, 42, 0.8));
-// opacity: .6;
+    // min-height: 80vh;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom left, rgba(134, 162, 163, 0.8), rgba(241, 89, 42, 0.8));
+    // opacity: .6;
   }
 }
 
@@ -95,10 +100,12 @@
 .text {
   padding: 0 1rem;
   color: #302824;
-  font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, sans-serif;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  text-transform: uppercase;
   width: 100%;
   min-width: 20rem;
   min-height: 10rem;
@@ -112,4 +119,45 @@
 .text:hover {
   color: $white;
 }
-@media screen and (min-width: 10rem) and (max-width: 40rem) {}
+
+.tips {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+}
+
+.tip__btn {
+  // width: 2rem;
+  // height: 1rem;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  color: $white;
+  background: $weld;
+  margin-right: 1rem;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 10rem) and (max-width: 40rem) {
+  .landing {
+    &__inner {
+      padding: 0 1rem;
+    }
+  }
+  .link__item {
+    margin: 0 0.5rem;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .sub {
+    font-size: 18px;
+    line-height: 2rem;
+  }
+  .tips {
+    padding-top: 1.5rem;
+  }
+}
